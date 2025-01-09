@@ -57,8 +57,10 @@ The inner loop (j) performs comparisons between adjacent elements.
 If the current element is greater than the next element, they are swapped.
 The process repeats until the array is fully sorted.
 
-Key Points
-Complexity:O(n 2)
+Complexity:
+Best Case: O(n) (if the array is already sorted).
+Worst Case: O(n^2) (if the array is sorted in reverse order).
+
 Limitation: Bubble Sort is inefficient for large datasets compared to other algorithms like Quick Sort or Merge Sort.
 
 
