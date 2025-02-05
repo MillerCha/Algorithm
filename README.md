@@ -64,6 +64,26 @@ Worst Case: O(n^2) (if the array is sorted in reverse order).
 Limitation: Bubble Sort is inefficient for large datasets compared to other algorithms like Quick Sort or Merge Sort.
 
 
+# Binary Search Tree (BST) Implementation
+This project implements a Binary Search Tree (BST) in JavaScript. The Node class represents a tree node with left and right children, where values smaller than the parent go to the left, and larger values go to the right.
+
+The InsertNode function recursively inserts values into the tree, ensuring proper BST structure. The script initializes a tree from an array of numbers and prints the resulting tree in JSON format.
+
+Performance:
+The time complexity of inserting a value into a BST depends on the tree's balance:
+Best case (Balanced tree): 
+O(logn) – Each insertion follows a binary search pattern, reducing the search space by half at each step.
+Worst case (Skewed tree): 
+O(n) – If the tree becomes unbalanced (e.g., inserting sorted values without balancing), insertion degrades to linear time, resembling a linked list.
+For optimal performance, self-balancing BSTs (e.g., AVL Tree, Red-Black Tree) should be used in scenarios requiring frequent insertions and lookups.
+
+How to Use
+Run the Script:
+node Tree\BinaryTree
+
+This implementation provides a simple and efficient way to build a BST from an unordered list of numbers. 🚀
+
+
 
 
 License
