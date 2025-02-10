@@ -33,7 +33,6 @@ function Min(root){
 
 }
 
-
 function Max(root){
     if(root === null)
         return null;
@@ -54,7 +53,31 @@ function Search(root, value){
     else
         return Search(root.right,value);
 }
+/*
+  Finds a node with the given value in a Binary Search Tree (BST) 
+  and returns both the node and its parent.
+ 
+  This function is useful for operations like deletion, where knowing 
+  the parent node helps in restructuring the tree efficiently.
+ 
+  @param {Node} node - The current node being searched.
+  @param {number} value - The value to search for in the tree.
+  @param {Node|null} parent - The parent of the current node (default: null).
+  @returns {Object} An object containing:
+    - {Node|null} node: The found node, or null if not found.
+    - {Node|null} parent: The parent of the found node (or the last visited node if not found).
+ */
 
+function SearchNodeAndParent(root, value, parent = null){
+    if(root === null)
+        {root, parent};
+    if(root.value === value)
+        return {root, parent};
+    if(value < root.value)
+        return SearchNodeAndParent(root.left,value,root);
+    else
+        return SearchNodeAndParent(root.right,value,root);
+}
 
 
 const array = [5, 6, 7, 1, 2, 4,5];
@@ -75,3 +98,7 @@ console.log("Max:",maxNode.value);
 
 const searchNode = Search(tree,5);
 console.log("searchNode:",searchNode);
+
+
+const searchNodeAndParent = SearchNodeAndParent(tree,4);
+console.log("searchNodeAndParent:",searchNodeAndParent);
