@@ -1,4 +1,4 @@
-/*create binary tree*/
+/*create binary search tree*/
 
 class Node {
     constructor(value){
