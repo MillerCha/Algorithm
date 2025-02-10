@@ -44,6 +44,18 @@ function Max(root){
 
 }
 
+function Search(root, value){
+    if(root === null)
+        return null;
+    if(root.value === value)
+        return root;
+    if(value < root.value)
+        return Search(root.left,value);
+    else
+        return Search(root.right,value);
+}
+
+
 
 const array = [5, 6, 7, 1, 2, 4,5];
 let tree = null;
@@ -60,3 +72,6 @@ console.log("Min:",minNode.value);
 
 const maxNode = Max(tree);
 console.log("Max:",maxNode.value);
+
+const searchNode = Search(tree,5);
+console.log("searchNode:",searchNode);
